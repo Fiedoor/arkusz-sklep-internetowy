@@ -1,0 +1,54 @@
+header {
+    background-color: #e8c84e;
+    height: 50px;
+    font-size: 130%;
+    text-align: center;
+}
+
+#lewy {
+    background-color: #ffb544;
+    height: 500px;
+    width: 40%;
+    font-size: 130%;
+}
+
+#srodkowy {
+    height: 500px;
+    width: 30%;
+    text-align: center;
+}
+
+#prawy {
+    background-color: #ffb544;
+    height: 500px;
+    width: 30%;
+    font-size: 130%;
+    text-align: center;
+}
+
+footer {
+    background-color: #e8c84e;
+    height: 50px;
+    text-align: right;
+    padding: 10px;
+}
+
+li {
+    margin-top: 30px;
+    background-color: #FFAA00;
+}
+
+img,
+h3 {
+    margin-top: 50px;
+}
+
+form {
+    margin-bottom: 100px;
+}
+
+/* Moje */
+main {
+    display: flex;
+    flex-direction: row;
+}
