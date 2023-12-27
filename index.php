@@ -16,7 +16,12 @@
             <h3>Promocja 15% obejmuje artykuły:</h3>
             <ul>
                 <?php
-                //skrypt1
+                $conn = mysqli_connect('localhost', 'root', '', 'sklep');
+                $q1 = "SELECT nazwa FROM towary WHERE promocja=1";
+                $res1 = mysqli_query($conn, $q1);
+                foreach ($res1 as $row) {
+                    echo "<li>" . $row['nazwa'] . "</li>";
+                }
                 ?>
             </ul>
         </div>
@@ -32,7 +37,15 @@
                 <input type="submit" value="WYBIERZ">
             </form>
             <?php
-            //skrypt2
+            $nazwa = $_POST['towar'];
+            $q2 = "SELECT cena FROM towary WHERE nazwa='$nazwa'";
+            $res2 = mysqli_query($conn, $q2);
+            foreach ($res2 as $row) {
+                $cena = $row['cena'] * 0.85;
+                $cena = round($cena, 2);
+                echo $cena;
+            }
+            mysqli_close($conn); //CONNECTION TERMINATED
             ?>
         </div>
         <div id="prawy">
